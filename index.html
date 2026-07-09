@@ -411,7 +411,7 @@ function buildConsultMailto(overall, li){
     weak.forEach(x=> lines.push('- ' + x.d.name + ' (' + Math.round(x.s) + '%)'));
   }
   lines.push('', 'Please let me know a good time to talk.');
-  return 'mailto:info@funnynumber.com'
+  return 'mailto:hello@funnynumber.com'
     + '?subject=' + encodeURIComponent('Consultation request following my Commercial Maturity Assessment')
     + '&body=' + encodeURIComponent(lines.join('\n'));
 }
@@ -464,7 +464,7 @@ function buildMailto(){
     ...T.dims.map((d,i)=>({d, s:scores[i]})).filter(x=>x.s<60).sort((a,b)=>a.s-b.s)
       .map(x=>'- ' + x.d.name + ' (' + Math.round(x.s) + '%)'),
   ];
-  return 'mailto:info@funnynumber.com'
+  return 'mailto:hello@funnynumber.com'
     + '?subject=' + encodeURIComponent('Commercial Maturity Assessment Results')
     + '&body=' + encodeURIComponent(lines.join('\n'));
 }
